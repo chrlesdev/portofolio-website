@@ -13,7 +13,7 @@ export default function HeroSection() {
           <h1 className="max-w-2xl mb-4 sm:text-5xl lg:text-6xl text-4xl font-extrabold leading-tight text-black">
             <span className="block text-transparent bg-clip-text bg-gradient-to-br from-black via-slate-500 to-black">Hi, I&apos;m Muhamad Charles Cornelio</span>
           </h1>
-          <TypeAnimation sequence={["Web Developer", 2000, "Backend Engineer", 2000, "Next.js Enthusiast", 2000]} wrapper="p" className="text-muted-foreground text-base sm:text-lg lg:text-xl max-w-xl mb-6" speed={50} repeat={Infinity} />
+          <TypeAnimation sequence={["Web Developer", 2000, 2000, "Next.js Enthusiast", 2000]} wrapper="p" className="text-muted-foreground text-base sm:text-lg lg:text-xl max-w-xl mb-6" speed={50} repeat={Infinity} />
 
           <p className="text-muted-foreground text-base sm:text-lg lg:text-xl max-w-xl mb-6">
             A fullstack web developer crafting modern, responsive, and scalable web apps using technologies like <strong>Next.js</strong>, <strong>Express</strong>, and <strong>MySQL</strong>.
