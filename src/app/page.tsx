@@ -25,7 +25,7 @@ export default function Home() {
         <span>© {new Date().getFullYear()} Charles.Dev</span>
 
         <div className="flex justify-center space-x-5">
-          <Link href="https://github.com/autocsearch" target="_blank" rel="noopener noreferrer" className="underline hover:text-black">
+          <Link href="https://github.com/chrlesdev" target="_blank" rel="noopener noreferrer" className="underline hover:text-black">
             GitHub
           </Link>
 

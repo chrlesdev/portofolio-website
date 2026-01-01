@@ -1,6 +1,5 @@
 import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-// import { Button } from "@/components/ui/button";
-// import { FaLink } from "react-icons/fa";
+
 import Link from "next/link";
 import Image from "next/image";
 import { allProjects } from "@/lib/projectDetails/main";
