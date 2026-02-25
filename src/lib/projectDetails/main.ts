@@ -1,5 +1,4 @@
-import oasis from "./oasis";
-import shopedia from "./shopedia";
 import nestchat from "./nestChat";
+import oasis from "./oasis";
 
-export const allProjects = [oasis, shopedia, nestchat];
+export const allProjects = [nestchat, oasis];

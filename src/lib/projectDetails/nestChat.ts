@@ -1,15 +1,31 @@
 const nestchat = {
   slug: "nestchat",
+  category: "fullstack",
   overview: {
-    title: "NestChat - RealTime Chat App",
-    shortDescription: `
-      A real-time chat app using Google Auth and Redis pub/sub for fast, live conversations in a minimal interface.
-    `,
+    title: "NestChat - Real-Time Messenger",
+    shortDescription: "A high-performance chat application leveraging Redis Pub/Sub and WebSockets for instantaneous, scalable communication.",
   },
-  description: `
-    NestChat is a real-time messaging platform built with Next.js, designed for instant communication using Google authentication and Redis-based pub/sub architecture. Users can sign in with their Google accounts, connect with other users, and send real-time messages via a modern, responsive interface. The app ensures fast message delivery and automatic updates across clients.
-  `,
-  techStack: ["Next.js", "TypeScript", "Tailwind CSS", "ShadCN UI", "NextAuth", "Redis", "Socket.io"],
+  description: `NestChat is a real-time messaging platform designed for speed. By utilizing Redis as a message broker and Socket.io for persistent connections, the app handles message delivery with sub-millisecond latency. 
+
+The project focuses on horizontal scalability, ensuring that even as user traffic increases, the Pub/Sub architecture keeps chat rooms synchronized across multiple server instances. Authentication is handled via NextAuth with Google integration for a seamless onboarding experience.`,
+
+  // Highlighting the technical architecture as "Goals"
+  goals: [
+    "Real-Time Sync: Sub-millisecond message delivery using Socket.io.",
+    "Redis Pub/Sub: Ensuring message persistence and cross-server synchronization.",
+    "Google OAuth: Secure and fast user authentication flow.",
+    "Presence Tracking: Real-time 'Online/Offline' status for all contacts.",
+    "Optimistic Updates: Instant UI feedback for sent messages before server confirmation.",
+    "Responsive Design: A desktop-class chat experience on mobile devices.",
+  ],
+
+  techStack: ["Next.js", "TypeScript", "Redis", "Socket.io", "NextAuth", "Tailwind CSS", "ShadCN UI"],
+
+  links: {
+    github: "https://github.com/chrlesdev/NestChat",
+    demo: "https://nestchat-demo.vercel.app", // Replace with actual if available
+  },
+
   screenshots: [
     {
       title: "Login Page",
