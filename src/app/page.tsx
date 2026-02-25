@@ -1,41 +1,56 @@
+"use client";
+
 import HeroSection from "@/components/HeroPage";
 import AboutSection from "@/components/AboutSection";
 import Projects from "@/components/ProjectList";
 import Contacts from "@/components/Contact";
-
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#ffffff]">
-      <div className="container mx-auto px-12 py-4" id="hero">
+    <main className="flex min-h-screen flex-col bg-white scroll-smooth">
+      <section id="hero" className="container mx-auto px-6 py-10 lg:py-20">
         <HeroSection />
-      </div>
-      <div id="about">
+      </section>
+
+      <section id="about" className="bg-slate-50/80 border-y border-slate-100">
         <AboutSection />
-      </div>
-      <div id="projects">
+      </section>
+
+      <section id="projects" className="py-10">
         <Projects />
-      </div>
-      <div id="contact">
+      </section>
+
+      <section id="contact" className="bg-slate-50/50 py-20">
         <Contacts />
-      </div>
+      </section>
 
-      <footer className="text-center flex flex-col md:flex-row justify-between p-6 text-sm text-muted-foreground border-black mt-12 border-t-2 space-y-4 md:space-y-0 md:space-x-4">
-        <span>© {new Date().getFullYear()} Charles.Dev</span>
+      <footer className="bg-white border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-6 py-12">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex flex-col items-center md:items-start gap-2">
+              <span className="font-bold text-xl tracking-tighter">
+                Charles<span className="text-emerald-500">.</span>Dev
+              </span>
+              <p className="text-slate-500 text-sm">Built with Next.js, Tailwind, and Passion.</p>
+            </div>
 
-        <div className="flex justify-center space-x-5">
-          <Link href="https://github.com/chrlesdev" target="_blank" rel="noopener noreferrer" className="underline hover:text-black">
-            GitHub
-          </Link>
+            <div className="flex items-center gap-8">
+              <Link href="https://github.com/chrlesdev" target="_blank" className="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">
+                GitHub
+              </Link>
+              <Link href="https://www.linkedin.com/in/muhamad-charles-cornelio-a53a75339/" target="_blank" className="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">
+                LinkedIn
+              </Link>
+              <Link href="/resume.pdf" target="_blank" className="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">
+                Resume
+              </Link>
+            </div>
+          </div>
 
-          <Link href="/resume.pdf" target="_blank" className="underline flex h-fit hover:text-black">
-            Resume
-          </Link>
-
-          <Link href="https://www.linkedin.com/in/muhamad-charles-cornelio-a53a75339/" target="_blank" rel="noopener noreferrer" className="underline hover:text-black">
-            LinkedIn
-          </Link>
+          <div className="mt-12 pt-8 border-t border-slate-50 text-center">
+            <p className="text-xs text-slate-400">© {new Date().getFullYear()} Muhamad Charles Cornelio. All rights reserved.</p>
+          </div>
         </div>
       </footer>
     </main>

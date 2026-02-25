@@ -21,14 +21,12 @@ export default function AboutSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          {/* 1. Illustration Box (Spans 7 cols) */}
           <div className="md:col-span-7 bg-white border border-slate-200 p-8 rounded-3xl shadow-sm flex items-center justify-center group hover:border-emerald-200 transition-colors">
             <div className="relative w-full h-48 md:h-64 transition-transform duration-500 group-hover:scale-105">
               <Image src="/about.svg" fill alt="Working illustration" className="object-contain" />
             </div>
           </div>
 
-          {/* 2. Skills Box (Spans 5 cols) */}
           <div className="md:col-span-5 bg-white border border-slate-200 p-8 rounded-3xl shadow-sm flex flex-col">
             <h4 className="font-bold text-xl mb-6 flex items-center gap-2">
               <span className="text-emerald-500">🧠</span> Tech Stack
