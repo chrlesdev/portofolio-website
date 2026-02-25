@@ -7,31 +7,57 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section>
-      <div className="grid grid-cols-1 sm:grid-cols-12 my-4">
-        <div className="col-span-7 place-self-center place-items-center grid lg:place-items-start text-center sm:text-left">
-          <h1 className="max-w-2xl mb-4 sm:text-5xl lg:text-6xl text-4xl font-extrabold leading-tight text-black">
-            <span className="block text-transparent bg-clip-text bg-gradient-to-br from-black via-slate-500 to-black">Hi, I&apos;m Muhamad Charles Cornelio</span>
-          </h1>
-          <TypeAnimation sequence={["Web Developer", 2000, 2000, "Next.js Enthusiast", 2000]} wrapper="p" className="text-muted-foreground text-base sm:text-lg lg:text-xl max-w-xl mb-6" speed={50} repeat={Infinity} />
+    <section className="relative overflow-hidden py-16 lg:py-24">
+      <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* Left Content */}
+        <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
+          <div className="space-y-2">
+            <h2 className="text-sm font-semibold tracking-widest uppercase text-slate-500">Available for projects</h2>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900">
+              Hi, I&apos;m <span className="text-black">Charles.</span>
+            </h1>
+            <div className="h-12 sm:h-16">
+              {" "}
+              {/* Fixed height prevents layout shift */}
+              <TypeAnimation
+                sequence={["Web Developer", 2000, "Next.js Enthusiast", 2000, "Fullstack Engineer", 2000]}
+                wrapper="span"
+                className="text-2xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-500"
+                speed={50}
+                repeat={Infinity}
+              />
+            </div>
+          </div>
 
-          <p className="text-muted-foreground text-base sm:text-lg lg:text-xl max-w-xl mb-6">
-            A fullstack web developer crafting modern, responsive, and scalable web apps using technologies like <strong>Next.js</strong>, <strong>Express</strong>, and <strong>MySQL</strong>.
+          <p className="text-slate-600 text-lg sm:text-xl max-w-2xl leading-relaxed">
+            I craft high-performance, responsive web applications using
+            <span className="text-slate-900 font-medium"> Next.js</span>,<span className="text-slate-900 font-medium"> Express</span>, and
+            <span className="text-slate-900 font-medium"> MySQL</span>. Focused on turning complex problems into elegant digital solutions.
           </p>
 
-          <div className="flex gap-4 mt-6 flex-wrap">
-            <Link href={"https://www.linkedin.com/in/muhamad-charles-cornelio-a53a75339/"} target="_blank">
-              <Button variant={"outline"}>Hire me</Button>
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <Link href="https://www.linkedin.com/in/muhamad-charles-cornelio-a53a75339/" target="_blank">
+              <Button size="lg" className="w-full sm:w-auto px-8 bg-slate-900 hover:bg-slate-800 text-white transition-all">
+                Hire Me
+              </Button>
             </Link>
-            <Link href={"/resume.pdf"} target="_blank">
-              <Button>View CV</Button>
+            <Link href="/resume.pdf" target="_blank">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto px-8 border-2 transition-all">
+                View CV
+              </Button>
             </Link>
           </div>
         </div>
 
-        <div className="col-span-5 place-self-center mt-4 lg:mt-0">
-          <div className="bg-gradient-to-br from-[#c0ffe3] via-[#abf7b6] to-[#e0f7ec] lg:w-[400px] lg:h-[400px] w-[250px] h-[250px] rounded-3xl relative">
-            <Image src={"/Hello.svg"} alt="hello image" height={300} width={300} className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" />
+        {/* Right Image Container */}
+        <div className="lg:col-span-5 relative flex justify-center items-center">
+          {/* Decorative background blur */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-emerald-200 rounded-full blur-[80px] opacity-50" />
+
+          <div className="relative z-10 bg-white p-4 rounded-[2rem] shadow-2xl border border-slate-100 transition-transform hover:scale-[1.02] duration-300">
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-100 lg:w-[380px] lg:h-[380px] w-[280px] h-[280px] rounded-[1.5rem] relative overflow-hidden">
+              <Image src="/Hello.svg" alt="Charles illustration" fill className="object-contain p-8" priority />
+            </div>
           </div>
         </div>
       </div>

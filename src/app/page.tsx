@@ -29,7 +29,6 @@ export default function Home() {
             GitHub
           </Link>
 
-          {/* Internal link using Next.js Link */}
           <Link href="/resume.pdf" target="_blank" className="underline flex h-fit hover:text-black">
             Resume
           </Link>
