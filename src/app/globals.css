@@ -124,3 +124,14 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 transition-colors duration-300;
+  }
+
+  /* This forces the dark mode background to a deep navy slate */
+  .dark body {
+    @apply bg-[#020617] text-slate-50;
+  }
+}

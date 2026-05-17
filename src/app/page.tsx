@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-white scroll-smooth">
+    <main className="bg-white dark:bg-[#020617] text-slate-900 dark:text-slate-100 transition-colors duration-500">
       <section id="hero" className="container mx-auto px-6 py-10 lg:py-20">
         <HeroSection />
       </section>

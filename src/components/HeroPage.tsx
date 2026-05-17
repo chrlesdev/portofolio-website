@@ -7,9 +7,8 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden py-16 lg:py-24">
+    <section className="relative bg-emerald-50 dark:bg-emerald-950/20 rounded-[3rem] p-8 overflow-hidden border border-emerald-200/50 dark:border-emerald-900/30 shadow-2xl shadow-emerald-500/10">
       <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        {/* Left Content */}
         <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
           <div className="space-y-2">
             <h2 className="text-sm font-semibold tracking-widest uppercase text-slate-500">Available for projects</h2>
@@ -18,7 +17,6 @@ export default function HeroSection() {
             </h1>
             <div className="h-12 sm:h-16">
               {" "}
-              {/* Fixed height prevents layout shift */}
               <TypeAnimation
                 sequence={["Web Developer", 2000, "Next.js Enthusiast", 2000, "Fullstack Engineer", 2000]}
                 wrapper="span"
@@ -41,17 +39,10 @@ export default function HeroSection() {
                 Hire Me
               </Button>
             </Link>
-            <Link href="/resume.pdf" target="_blank">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto px-8 border-2 transition-all">
-                View CV
-              </Button>
-            </Link>
           </div>
         </div>
 
-        {/* Right Image Container */}
         <div className="lg:col-span-5 relative flex justify-center items-center">
-          {/* Decorative background blur */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-emerald-200 rounded-full blur-[80px] opacity-50" />
 
           <div className="relative z-10 bg-white p-4 rounded-[2rem] shadow-2xl border border-slate-100 transition-transform hover:scale-[1.02] duration-300">
